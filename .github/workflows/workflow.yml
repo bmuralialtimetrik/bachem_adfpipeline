@@ -19,4 +19,6 @@ jobs:
       with:
         azcliversion: latest
         inlineScript: |
-          az account show
+          #az account show
+          az datafactory trigger create --resource-group "MyRG" --factory-name "ADFName"  --name "MyTrigger" --properties @Trigger.json 
+
